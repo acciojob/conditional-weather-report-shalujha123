@@ -1,22 +1,16 @@
 import React from "react";
 
-const WeatherDisplay = ({ temp }) => {
+const WeatherDisplay = ({ weather }) => {
   return (
     <div>
-      {temp.map((item, index) => (
-        <div key={index}>
-          <p>
-            <span
-              style={
-                item.temperature > 20 ? { color: "red" } : { color: "blue" }
-              }
-            >
-              {item.temperature}
-            </span>
-          </p>
-          <p>{item.conditions}</p>
-        </div>
-      ))}
+      <p>
+        <span
+          style={weather.temperature > 20 ? { color: "red" } : { color: "blue" }}
+        >
+          Temperature: {weather.temperature}
+        </span>
+      </p>
+      <p>Condition: {weather.conditions}</p>
     </div>
   );
 };

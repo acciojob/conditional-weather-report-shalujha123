@@ -4,11 +4,11 @@ import WeatherDisplay from "./WeatherDisplay";
 
 
 const App = () => {
-  const [temp] = useState([ {temperature: 25, conditions: "Sunny"} ]);
+  const [weather] = useState({temperature: 25, conditions: "Sunny"});
   return (
     <div>
       {/* Do not remove the main div */}
-      <WeatherDisplay temp={temp} />
+      <WeatherDisplay weather={weather} />
     </div>
   );
 };
